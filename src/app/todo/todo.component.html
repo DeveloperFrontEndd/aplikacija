@@ -1,0 +1,19 @@
+<div class="todoapp">
+
+	<h1>Todo</h1>
+		<div class="todo">
+			<input #todo type="text" name="text" placeholder="Your name" ngModel>
+
+				<button mat-fab color="primary" (click)="add(todo.value)">Add</button>
+
+				<div class="data">
+					<ul>
+						<li *ngFor="let todo of todoArray">{{ todo }}
+							<i class="material-icons" (click)="delete(todo)">delete </i>
+						</li>
+					</ul>
+
+
+				</div>
+		</div>
+</div>
